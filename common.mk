@@ -76,6 +76,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
+# PermissionController privapp allowlist - needed on system partition so it is
+# found when Google's APEX replaces the AOSP-built com.android.permission APEX
+PRODUCT_COPY_FILES += \
+    packages/modules/Permission/permissions/com.android.permissioncontroller.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.permissioncontroller.xml
+
 # Camera
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
@@ -328,7 +333,8 @@ endif
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
-    sensors.dynamic_sensor_hal
+    sensors.dynamic_sensor_hal \
+	sensors.samsung
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf

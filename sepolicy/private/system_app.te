@@ -1,0 +1,2 @@
+# Allow SPenActions to use UEventObserver for hall_ic garage detection
+allow system_app self:netlink_kobject_uevent_socket { create bind read setopt };

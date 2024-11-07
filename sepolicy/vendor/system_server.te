@@ -1,2 +1,14 @@
 # Allow system_server process to read /proc/last_kmsg
 allow system_server proc_last_kmsg:file r_file_perms;
+
+# Samsung TSP grip/deadzone control from WindowManagerService's
+# TspStateController writes to /sys/class/sec/tsp/cmd.
+allow system_server vendor_sysfs_touchscreen:dir r_dir_perms;
+allow system_server vendor_sysfs_touchscreen:file r_file_perms;
+allow system_server vendor_sysfs_touchscreen_writable:file rw_file_perms;
+
+# Samsung MDNIE display quality control from WindowManagerService's
+# DisplayQualityController writes to /sys/class/mdnie/mdnie/{night_mode,afc,
+# whiteRGB,scenario,accessibility,color_lens}.
+allow system_server vendor_sysfs_mdnie:dir search;
+allow system_server vendor_sysfs_mdnie:file { open read write };

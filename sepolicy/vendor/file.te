@@ -24,16 +24,23 @@ type sec_efs_file, file_type;
 type tee_efs_file, file_type;
 
 # Fastcharge
-type sysfs_sec_fastcharge, fs_type, sysfs_type;
-type sysfs_sec_fastcharge_writable, fs_type, sysfs_type;
+type vendor_sysfs_sec_fastcharge, fs_type, sysfs_type;
+type vendor_sysfs_sec_fastcharge_writable, fs_type, sysfs_type;
 
 
 # Fingerprint
 type vendor_biometrics_data_file, file_type, data_file_type;
+type vendor_sysfs_fingerprint, fs_type, sysfs_type;
 
 # Input
 type proc_bus_input, fs_type, proc_type;
 type vendor_sysfs_input, fs_type, sysfs_type;
+
+# LiveDisplay
+type vendor_sysfs_mdnie_writable, sysfs_type, rw_fs_type, fs_type;
+type vendor_sysfs_touchscreen_writable, sysfs_type, rw_fs_type, fs_type;
+type vendor_sysfs_lcd_writable, sysfs_type, fs_type; 
+type vendor_sysfs_sec_touchscreen, sysfs_type, fs_type;
 
 # Proc
 type proc_last_kmsg, fs_type, proc_type;
@@ -52,12 +59,24 @@ type vendor_sysfs_thermal, fs_type, sysfs_type;
 
 # Touchscreen
 type vendor_sysfs_touchscreen, fs_type, sysfs_type;
-type vendor_sysfs_touchscreen_writable, fs_type, sysfs_type;
+
+# Backlight
+type vendor_sysfs_backlight, fs_type, sysfs_type;
+type vendor_sysfs_backlight_writable, fs_type, sysfs_type;
 
 # Vibrator
 type vendor_sysfs_vib_support, fs_type, sysfs_type;
 type vendor_sysfs_vib_writable, fs_type, sysfs_type;
 
 # Wi-Fi
-type sysfs_wifi, fs_type, sysfs_type;
+type vendor_sysfs_wifi, fs_type, sysfs_type;
 type wifi_efs_file, file_type;
+
+# night_dim
+type vendor_sysfs_nightdim, sysfs_type, fs_type, rw_fs_type;
+
+# fod_pos
+type vendor_sysfs_fingerprint_pos, sysfs_type, fs_type;
+
+# Allow sec_tsp access
+type vendor_sysfs_sec_tsp, fs_type, sysfs_type;
