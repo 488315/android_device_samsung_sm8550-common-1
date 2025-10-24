@@ -680,7 +680,22 @@ system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
 system_ext/lib64/libdiag_system.so
+<<<<<<< HEAD
 vendor/etc/permissions/vendor.samsung.hardware.telephony.cdma_excluded.xml
+||||||| parent of 6212131 (sm8550-common: Decommonize IMS blobs)
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+vendor/etc/init/ims_rtp_daemon.rc
+vendor/etc/init/imsdaemon.rc
+vendor/etc/permissions/vendor.samsung.hardware.telephony.cdma_excluded.xml
+vendor/etc/seccomp_policy/imsrtp.policy
+=======
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+vendor/etc/init/ims_rtp_daemon.rc
+vendor/etc/init/imsdaemon.rc
+vendor/etc/seccomp_policy/imsrtp.policy
+>>>>>>> 6212131 (sm8550-common: Decommonize IMS blobs)
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 
