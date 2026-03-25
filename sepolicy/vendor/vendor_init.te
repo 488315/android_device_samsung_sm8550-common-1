@@ -8,3 +8,12 @@ allow vendor_init vendor_ssr_prop:property_service set;
 
 # Allow vendor_init to set vendor_thermal_prop properties
 allow vendor_init vendor_thermal_prop:property_service set;
+
+# Allow vendor_init to set system audio properties from /vendor/build.prop
+set_prop(vendor_init, audio_prop)
+
+# Suppress cache partition access denial (full_treble neverallow blocks vendor_init from core_data_file_type)
+dontaudit vendor_init cache_file:dir search;
+
+# Allow vendor_init to set display driver ready property
+set_prop(vendor_init, vendor_display_prop)

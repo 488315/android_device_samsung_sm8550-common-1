@@ -1,0 +1,2 @@
+# Suppress debug.sf.* property set denial (debug_prop is core_property_type; vendor domains cannot set it)
+dontaudit qti_display_boot debug_prop:property_service set;

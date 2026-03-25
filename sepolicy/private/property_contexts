@@ -26,5 +26,9 @@ ro.simbased.changetype                           u:object_r:telephony_config_pro
 persist.dm.passive.                              u:object_r:system_sensor_prop:s0
 ro.factory.sensor.                               u:object_r:exported_system_prop:s0
 
+# Audio
+audio.sys.noisy.broadcast.delay                  u:object_r:audio_prop:s0
+audio.sys.offload.pstimeout.secs                 u:object_r:audio_prop:s0
+
 # Thermal
 dev.sdhms.thermal.hv                             u:object_r:exported_system_prop:s0
