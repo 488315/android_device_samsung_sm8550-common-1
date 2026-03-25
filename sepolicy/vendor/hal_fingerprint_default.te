@@ -23,6 +23,9 @@ allow hal_fingerprint_default vendor_biometrics_data_file:file create_file_perms
 # Allow fingerprint HAL to search vendor_sysfs_battery files
 allow hal_fingerprint_default vendor_sysfs_battery:dir search;
 
+# Allow fingerprint HAL to search sysfs_batteryinfo (power_supply) for battery temperature
+allow hal_fingerprint_default sysfs_batteryinfo:dir search;
+
 allow hal_fingerprint_default device:chr_file { getattr };
 allow hal_fingerprint_default vendor_data_file:dir write;
 allow hal_fingerprint_default vendor_fingerprint_device:chr_file { open read write getattr ioctl };
